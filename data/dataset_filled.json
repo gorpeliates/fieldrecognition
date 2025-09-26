@@ -1,0 +1,1002 @@
+[
+    {
+        "summary":"Issue reported: Search bar expands unexpectedly without explicit user interaction",
+        "description":"Details provided:\n**Problem:** The search bar expands automatically without the user explicitly clicking on it, which is considered unexpected behavior. \n\n**Details:**\n\n* The search bar should only expand when the user clicks on it or interacts with it intentionally.\n\nNext steps: Debugging required.",
+        "reporter_name":"user_079",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_128",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":1
+    },
+    {
+        "summary":"Detected anomaly: AI Assistant Icon Color Missing When Menu Item is Under More",
+        "description":"Observed behaviour:\nThe AI Assistant menu item icon does not have the `--ai-color` applied when the item is hidden under the \"More\" menu dropdown. This causes the icon to appear without the expected color styling in the collapsed menu.\n\nThe issue is visible in the provided screenshots where the AI Assistant icon in the expanded sidebar shows the correct color, but the icon in the \"More\" dropdown menu appears without the `--ai-color` styling.\n\n**Problem:**\n- `--ai-color` CSS variable is not applied to the AI Assistant icon when it is accessed via the \"More\" dropdown menu.\n\n**Expected Behavior:**\n- The AI Assistant... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_062",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_018",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":2
+    },
+    {
+        "summary":"User noticed: Preserve table filtering after navigating back from a run selection",
+        "description":"Description:\n**Problem:**\nCurrently, when a user filters the table and selects a run, upon invoking the \"back\" action, the previously applied table filtering is lost.\n\n**Expected Behavior:**\nThe table filtering state should be preserved after selecting a run and returning using the \"back\" function, allowing for a seamless user experience without the need to reapply filters.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_134",
+        "project_name":"Fast Buffalo",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":3
+    },
+    {
+        "summary":"Issue reported: Containers crash with Failed to make POST error during concurrent runs",
+        "description":"Observed behaviour:\nWhen running six containers concurrently in the UI test project, several containers crash with the following error message:\n\n```text\n```\n\n\n**Problem or Question:**\n\n* What causes the POST request failure resulting in a 404 error during concurrent container runs?\n* How can the stability of concurrent container executions be improved to prevent crashes?\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_105",
+        "project_name":"Unidentified Hedgehog",
+        "Assignee":"user_126",
+        "Priority":"Major",
+        "Type":"Bug",
+        "id":4
+    },
+    {
+        "summary":"System shows: Inconsistent inlay hints for function signatures and lambdas",
+        "description":"Summary of issue:\nThere is an inconsistency in the display of inlay hints for function signatures and lambdas in the code editor. Specifically, the `func` template function signature shows a return type hint (`-> size_t`), whereas the equivalent lambda expression does not display a hint for its signature. \n\nExample code demonstrating the issue:\n```cpp\ntemplate<typename T>\nauto func(std::vector<T> v) {\n    return v.size();\n};\n\nauto lambda = []<typename T>(std::vector<T> v) {\n    return v.size();\n};\n```\n\nThe expected behavior is to have consistent inlay hints for both the function and the lambda, including the hi... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_078",
+        "project_name":"Lazy Whale",
+        "Assignee":"user_056",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":5
+    },
+    {
+        "summary":"Issue reported: Context menu action Disable for This Project is disabled despite project settings allowing to disable AI Assistant",
+        "description":"Summary of issue:\nThe 'Disable for This Project' action in the context menu of the AI Assistant toolbar widget is disabled, preventing users from disabling AI Assistant directly from the toolbar. However, the setting to enable or disable AI Assistant for the current project is accessible and editable in the Project Settings under Tools > AI Assistant.\n\nAdditional details:\n- The 'Disable for This Project' option is shown as disabled in the toolbar context menu.\n- Disabling AI Assistant is possible via the project settings UI.\n- The action requiring the AI Assistant to be activated may be causing this inconsisten... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_113",
+        "project_name":"Lazy Beaver",
+        "Assignee":"user_113",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":6
+    },
+    {
+        "summary":"System shows: False positive in IncorrectCancellationExceptionHandling inspection with ProcessCanceledException subclass",
+        "description":"Observed behaviour:\nThe `IncorrectCancellationExceptionHandling` inspection incorrectly highlights the `catch (Exception e)` block as an error in the following code snippet:\n\n```java\npublic static void foo() {\n  try {\n    bar();\n  } catch (CancellationException e) {\n    throw e;\n  } catch (Exception e) {\n    e.printStackTrace();\n  }\n}\n\nstatic void bar() throws ProcessCanceledException {\n  throw new ProcessCanceledException();\n}\n```\n\nHere, `ProcessCanceledException` is a subclass of `CancellationException`. The inspection triggers a false positive warning on the general `Exception` catch clause.\n\n* Removing the `t... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_120",
+        "project_name":"Fast Badger",
+        "Assignee":"user_070",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":7
+    },
+    {
+        "summary":"Detected anomaly: High CPU Usage and Cache Rebuild Delay After Updating to EAP 4",
+        "description":"Observed behaviour:\nAfter updating the project environment to EAP 4, the system is experiencing extremely high CPU usage (up to 90%) during cache rebuilds, resulting in the editor freezing until the process completes. This issue occurs despite ignoring all node_modules, which improved speed but the CPU usage remained notably high. The problem may be linked to the new Files view feature, potentially causing more files to be indexed and thus increasing the indexing workload significantly.\n\n**Problem Details:**\n- Cache rebuild consumes excessive CPU resources (90%).\n- Editor performance is severely impacted, effecti... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_127",
+        "project_name":"Unidentified Tiger",
+        "Assignee":"user_048",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":8
+    },
+    {
+        "summary":"Problem observed: Add Mark as relates to (and\/or other link types?) option for duplicate suggestion SIV block",
+        "description":"Reported case:\nCurrently, the system suggests marking an issue as a duplicate, but there is no quick option to mark issues as \"relates to.\" Users have to manually set relations for relevant but non-duplicate issues. \n\n**Problem:** Lack of a one-click action to mark an issue as \"relates to\" limits linking flexibility.\n\n**Expected behavior:** Provide a \"Mark as 'relates to'\" option similar to the existing \"Mark as duplicate\" option to streamline issue relationship management.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_079",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_045",
+        "Priority":"Normal",
+        "Type":"Usability problem",
+        "id":9
+    },
+    {
+        "summary":"Improvement needed: AI duplicate detection includes parent and subtask issues erroneously",
+        "description":"Observed behaviour:\nThere is an issue with the AI duplicate detection system where it occasionally identifies parent issues and their subtasks as duplicates. Specifically, despite explicit links between issues being set by users (such as marking an issue as a subtask of a parent task), AI still includes these related issues in duplicate search results.\n\nCurrent behavior: The AI excludes explicit duplicate links already but may not always exclude other types of explicit issue links. In some cases, such as when the parent link is added after the duplicate cluster is created, linked issues still appear as duplicates... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_081",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_081",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":10
+    },
+    {
+        "summary":"Issue reported: IDE Freezes with Blank Whats New Page on Windows",
+        "description":"Details provided:\nOccasionally, opening the \"What's New\" page results in a blank screen, after which the entire IDE becomes unresponsive. This occurs sporadically, despite the page usually opening correctly via the Help menu or Start Editor\n\n![](Screenshot 2025-06-16 110641.png){width=70%}\n\nNext steps: Debugging required.",
+        "reporter_name":"user_127",
+        "project_name":"Unidentified Tiger",
+        "Assignee":"user_063",
+        "Priority":"Critical",
+        "Type":"Bug",
+        "id":11
+    },
+    {
+        "summary":"Detected anomaly: UI Improvement Suggestion for Preflight Checks Conclusion Formatting",
+        "description":"Details provided:\nThe preflight checks UI displays the conclusion message \"Please fix discovered problems and try again.\" as if it were a checklist item, similar to other checks like Operating System, Java, Android SDK, and Xcode. This presentation is considered confusing because the conclusion should be visually distinct from individual checklist items.\n\n**Problem:**\n\n* The final message \"Please fix discovered problems and try again.\" appears on the same level and style as checklist items, which is misleading.\n\n**Expected Behavior:**\n\n* The conclusion message should be displayed in a visually distinct way (e.g... [details trimmed]\n\nNext steps: Debugging required.",
+        "reporter_name":"user_084",
+        "project_name":"Fast Roe",
+        "Assignee":"user_077",
+        "Priority":"Minor",
+        "Type":"Bug",
+        "id":12
+    },
+    {
+        "summary":"Issue reported: Bad visual feedback on selected project dependency",
+        "description":"Observed behaviour:\nWhen using project dependencies in Kotlin (Jupyter) notebooks within IntelliJ IDEA, dependencies resolve correctly in the editor, but fail to resolve at runtime. Kernel restrt helps.\n\nAdditionally, the dependencies selection dropdown exhibits inconsistent behavior: after selecting a dependency from the dropdown, the selected item is not visually marked as selected (no tick overlay), which differs from the expected UI behavior seen in scratch files where no tick overlay is shown but the interface clearly indicates the dropdown interaction.\n\n**Expected behavior:**\n- Project dependencies should r... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_060",
+        "project_name":"Fast Wolf",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":13
+    },
+    {
+        "summary":"Issue reported: Error saving issue description due to duplicates suggestion-related exception",
+        "description":"Reported case:\nWhen attempting to save the description text in an issue, the system returns an unknown server error and fails to save the changes. This issue is reproducible on the issue page: n\nSteps to reproduce:\n\n1. Open the issue page.\n2. Edit the description text.\n3. Click the Save button.\n\nExpected behavior:\n\n* The description should save successfully without errors.\n\nObserved behavior:\n\n* The save action fails with a \"Couldn't save. unknown error\" notification.\n* The backend responds with a 500 Server Error and the message: {\"error\": \"server_error\", \"error_description\": \"unknown error\"}.\n* Server logs... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_081",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_114",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":14
+    },
+    {
+        "summary":"User noticed: Rename AppCode module configuration file",
+        "description":"Description:\n[!](Screenshot%202025-06-06%20at%2014.00.32.png)![](Screenshot 2025-06-06 at 14.00.32.png){width=70%}\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_097",
+        "project_name":"Fast Roe",
+        "Assignee":"user_066",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":15
+    },
+    {
+        "summary":"Improvement needed: Xcode file generation triggered unnecessarily",
+        "description":"Observed behaviour:\nThe plugin currently triggers Xcode files generation even when no changes have occurred in the project.\n![](Screen Recording 2025-06-06 at 12.58.35.mov)\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_097",
+        "project_name":"Fast Roe",
+        "Assignee":"user_053",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":16
+    },
+    {
+        "summary":"User noticed: Enable parallel Gradle model fetching setting does not persist for new Git worktrees if .idea directory exists without gradle.xml",
+        "description":"Description:\nThe setting 'Enable parallel Gradle model fetching for Gradle 7.4+' is expected to be enabled by default for newly created or opened projects in IntelliJ IDEA. However, when using Git worktrees that have an existing .idea directory without a gradle.xml file, this setting does not persist as expected.\n\n**Problem details:**\n\n* This default setting is stored globally in the system directory and applied only to newly opened projects without any existing caches or .idea folder.\n* Project-level setting is saved in `.idea\/gradle.xml`.\n* If a newly created Git worktree contains an existing `.idea` fol... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_136",
+        "project_name":"Fast Tiger",
+        "Assignee":"user_119",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":17
+    },
+    {
+        "summary":"Detected anomaly: Improve Kotlin Multiplatform project creation link behavior in IDEA New Project Wizard",
+        "description":"Description:\nThe current behavior of the Kotlin New Project IDEA Wizard has a link for creating a Kotlin Multiplatform project that directs users to the web-based KMP Wizard . This behavior can cause confusion for users who already have the Kotlin Multiplatform plugin installed in their IDE. \n\n**Problem:**\n- The 'click here' link in the New Project Wizard for Kotlin Multiplatform projects always directs to the web page.\n\n**Suggested improvement:**\n- If the Kotlin Multiplatform plugin is already installed, the link should instead guide the user to the IDE plugin page or directly open the IDE's Kotlin Multip... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_097",
+        "project_name":"Fast Roe",
+        "Assignee":"user_077",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":18
+    },
+    {
+        "summary":"Detected anomaly: Issue with resource loading in Jewel bundled inside IntelliJ IDEA platform",
+        "description":"Observed behaviour:\nWhen using Jewel bundled inside the IntelliJ IDEA platform (starting from version 243.6), resource loading via `org.jetbrains.compose.resources#getPlatformResourceReader()` fails. This failure occurs because `this.javaClass.classLoader.getResourceAsStream(path)` cannot find resources in the plugin's jar at runtime. Previously, until version 243.5, Jewel was bundled within the plugin, allowing successful resource loading. It is suspected that the current classloader (`PluginClassLoader`) does not have access to the plugin's resources for security reasons. Assistance is needed to confirm this be... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_074",
+        "project_name":"Fast Hedgehog",
+        "Assignee":"user_074",
+        "Priority":"Critical",
+        "Type":"Bug",
+        "id":19
+    },
+    {
+        "summary":"Issue reported: Support adding repositories to existing templates",
+        "description":"Reported case:\n## Status Quo\n\nCurrently, it is not possible to add additional repositories to an existing template. There are cases where adding a repo to an existing template is justified, e.g. adding a repo with warmup\/lifecycle scripts, or just adding another subproject which is extracted to a separate repository.\n\n## Objectives\n\nIt should be possible to add \/ remove repositories from a template.\n\n## Tech Notes\n\nSupporting this feature involves several UI\/UX challenges:\n\n- The current template edit form does not allow changing \"basic\" properties, requiring either moving the list of repositories out of the... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_115",
+        "project_name":"Lazy Panda",
+        "Assignee":"user_009",
+        "Priority":"Normal",
+        "Type":"Feature",
+        "id":20
+    },
+    {
+        "summary":"Improvement needed: Clarify compiler behavior for non-optional CoroutineContext parameter in runBlocking",
+        "description":"Details provided:\nThe `runBlocking` function in Kotlin has a non-optional parameter `context: CoroutineContext` as seen in its actual declaration:\n\n```kotlin\npublic actual fun <T> runBlocking(context: CoroutineContext, block: suspend CoroutineScope.() -> T): T\n```\n\nHowever, at the call-site, it appears possible to omit this `context` parameter without compiler errors, which causes confusion.\n\nThat's because expect provides default value. Make inlay or somehow hint users what value is used for `context`\n\nNext steps: Debugging required.",
+        "reporter_name":"user_017",
+        "project_name":"Fast Panda",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":21
+    },
+    {
+        "summary":"Problem observed: Add support for custom sshd_config overrides in project templates",
+        "description":"Summary of issue:\n## Status Quo\n\nCurrently, there is a problem with the default sshd configuration, especially related to IPv6 settings. This causes issues when users try to open connections configured with custom IPv6 setups, leading to unexpected failures.\n\n## Objectives\n\nAllow overriding the sshd configuration (`sshd_config`) at the template level by passing a custom `sshd_config` with specific values. This would provide flexibility and prevent connection issues caused by default settings.\n\n- The template should allow passing a custom `sshd_config` as part of the project template.\n- It should only be possibl... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_115",
+        "project_name":"Lazy Panda",
+        "Assignee":"user_009",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":22
+    },
+    {
+        "summary":"System shows: Native: partial linkage warnings are not consistently reported during incremental compilation with -Xenable-incremental-compilation",
+        "description":"Summary of issue:\n**Problem:**\nWhen using the `-Xenable-incremental-compilation` flag, partial linkage (PL) warnings are emitted only during the initial compilation against an API that triggers PL warnings. During subsequent incremental compilations, these warnings are suppressed and do not get re-reported.\n\nThis behavior is likely because the incremental compiler reuses previously compiled machine code, and the IR is not relinked fully in these incremental steps. As a result, some linkage problems are not discovered or reported after the first compilation.\n\n**Additional context:**\n```bash\n~\/.konan\/kotlin-nativ... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_122",
+        "project_name":"Fast Falcon",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":23
+    },
+    {
+        "summary":"Issue reported: Optimize performance for linked issues: trimmedIssues, issuesSize, and unresolvedIssuesSize calculations",
+        "description":"Reported case:\n### Problem Description\nAfter upgrading to version 2025.1, a major client experiences 100% CPU usage for several days. Profiling indicates heavy CPU and cache usage related to entityIterable operations such as `trimmedIssues`, `issuesSize`, and especially `unresolvedIssuesSize`. The `LinkRelatedIterableUtils.calculate` method appears prominently in snapshots.\n\nKey observations:\n- Addition of `issuesWithTeams` to `FilterPermissionsIterable.isAccessible` may have increased calculation time, despite caching.\n- Caching is frequently forcibly stopped for some entity iterables, indicating potential ... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_019",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_019",
+        "Priority":"Major",
+        "Type":"Performance problem",
+        "id":24
+    },
+    {
+        "summary":"System shows: Recurring KaBaseIllegalPsiException in FirJvmFieldApplicabilityChecker.kt during analysis",
+        "description":"Details provided:\nAn error occurs repeatedly during the processing of FirJvmFieldApplicabilityChecker.kt, specifically an org.jetbrains.kotlin.analysis.api.impl.base.components.KaBaseIllegalPsiException. The exception message states: \"The element cannot be analyzed in the context of the current session. The call site should be adjusted according to KaSession KDoc.\" Additional details include:\n\n* Use site module class: KaSourceModuleImpl\n* PSI module class: KaSourceModuleImpl\n* PSI element class: KtNameReferenceExpression\n\nThis error appears approximately every minute, indicating a recurring issue during the ana... [details trimmed]\n\nNext steps: Debugging required.",
+        "reporter_name":"user_017",
+        "project_name":"Fast Panda",
+        "Assignee":"user_017",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":25
+    },
+    {
+        "summary":"Improvement needed: Improve positioning of shortcut hint in code suggestion frames",
+        "description":"Summary of issue:\nCurrent behavior positions the shortcut hint (Tab to ...) awkwardly outside the suggestion's frame. \n\nThis can make the suggestion hard to read and aesthetically unpleasant.\n\nExpected behavior:\n\n* The keyboard shortcut hint (e.g., \"Tab to apply\") should be placed on the second line within the frame itself rather than outside it.\n\n!\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_002",
+        "project_name":"Lazy Beaver",
+        "Assignee":"user_071",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":26
+    },
+    {
+        "summary":"Detected anomaly: Remove location labels next to directory names in Project View",
+        "description":"Details provided:\nThe KMP plugin adds location labels to other projects\n\nNext steps: Debugging required.",
+        "reporter_name":"user_097",
+        "project_name":"Fast Roe",
+        "Assignee":"user_006",
+        "Priority":"Major",
+        "Type":"Bug",
+        "id":27
+    },
+    {
+        "summary":"Improvement needed: Investigate multiple exceptions related to org.jetbrains.kotlin.utils.exceptions.KotlinIllegalArgumentExceptionWithAttachments: We should be able t...",
+        "description":"Details provided:\n**Summary:**\n\nThere are frequent exceptions occurring in the version **Build #IU-252.18003.12, built on May 27, 2025 (IntelliJ IDEA 2025.2 EAP (Ultimate Edition))** during code completion in notebooks and it affects resolving.\n\n**Steps:**\n\n1. Create a notebook\n\n2. create a simple class in a cell\n\n3. in the new cell create a variable of this class\n\n**Expected:** everything resolved without any exceptions\n\n**Actual**: we get an exception.\n\n```\norg.jetbrains.kotlin.utils.exceptions.KotlinIllegalArgumentExceptionWithAttachments: We should be able to find a symbol for kotlin\/NotImplementedError (ha... [details trimmed]\n\nNext steps: Debugging required.",
+        "reporter_name":"user_091",
+        "project_name":"Fast Wolf",
+        "Assignee":"user_060",
+        "Priority":"Critical",
+        "Type":"Exception",
+        "id":28
+    },
+    {
+        "summary":"Improvement needed: Fix flaky update test in ToolsInstallationTest",
+        "description":"Observed behaviour:\nThe test `ToolsInstallationTest.Toolbox installs latest release version of GoLand and updates it to EAP version(TestInfo)` is experiencing a low success rate, particularly on Linux x64 platform, with a success rate of approximately 67.7% over the last 342 runs. The failure rate is notably higher on Linux and Mac compared to Windows, where the test performance is acceptable. The issue has led to muting the test on Linux and Mac platforms.\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_020",
+        "project_name":"Unidentified Whale",
+        "Assignee":"user_020",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":29
+    },
+    {
+        "summary":"Improvement needed: Island Dark Theme: Inconsistent highlighting for Registry options in Search Everywhere",
+        "description":"Summary of issue:\n**Steps to reproduce:**\n\n1. Open IDE in New Island Dark theme\n2. Invoke Search Everywhere\n3. Search for any registry options\n\n**Actual result:**\n\n* The theme combines dark elements (editor, registry) with less dark components, creating a visually jarring effect.\n* The light theme also has different highlighting for Registry options, but it looks more natural and visually pleasing.\n\n![](Screenshot 2025-06-05 at 15.05.47.png){width=70%}\n\n![](Screenshot 2025-06-05 at 15.06.56.png){width=70%}\n\n**Expected behavior:**\nThe highlighting and overall color scheme in the Registry options should be visual... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_054",
+        "project_name":"Fast Badger",
+        "Assignee":"user_103",
+        "Priority":"Normal",
+        "Type":"Cosmetics",
+        "id":30
+    },
+    {
+        "summary":"User noticed: Inconsistent drag-and-drop file behavior across operating systems in the IDE",
+        "description":"Summary of issue:\nCurrently, the IDE exhibits inconsistent behaviors when dragging and dropping files from various sources into the ProjectView or Editor across different operating systems:\n\n- On **Linux**, a Copy file dialog appears in all cases.\n- On **Mac and Windows**, a Move dialog appears when dropping files onto a folder, but no dialog shows when dropping onto a file.\n\nThis behavior contrasts with VSCode, which consistently offers only the Copy option across all platforms.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_116",
+        "project_name":"Fast Badger",
+        "Assignee":"user_093",
+        "Priority":"Major",
+        "Type":"Usability Problem",
+        "id":31
+    },
+    {
+        "summary":"User noticed: Structure view incorrectly shows private constructor properties as public",
+        "description":"Description:\nThe structure view in the IDE displays private properties declared in the constructor as if they were public. This discrepancy between the actual code and the structure view can lead to confusion regarding the access level of these properties.\n\nExample from the code snippet:\n```kotlin\nclass PostponedArgumentInputTypesResolver(\n    private val resultTypeResolver: ResultTypeResolver,\n    private val variableFixationFinder: VariableFixationFinder,\n    private val resolutionTypeSystemContext: ConstraintSystemUtilContext\n) {\n    \/\/ ...\n}\n```\nIn the structure view, these private properties are shown... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_072",
+        "project_name":"Fast Panda",
+        "Assignee":"user_132",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":32
+    },
+    {
+        "summary":"System shows: Add Ask AI About the Stack Trace Button Next to Copy to Clipboard",
+        "description":"Observed behaviour:\nCurrently, users can copy the error stack trace to the clipboard from the DSL Config Test results. However, one of the possible actions performed after copying a stack trace is seeking assistance from an AI chat application, which requires switching to a separate app.\n\n**Problem:** There is no integrated option to directly query an AI about the copied stack trace within the service, leading to an inconvenient workflow.\n\n**Expected Behavior:**\n\n* Add a button labeled **\"Ask AI About the Stack Trace\"** next to the existing **\"Copy to clipboard\"** button.\n* When clicked, this button should enable... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_003",
+        "project_name":"Fast Buffalo",
+        "Assignee":null,
+        "Priority":"Minor",
+        "Type":"Feature",
+        "id":33
+    },
+    {
+        "summary":"System shows: Settings tab: Improve clarity of search fields in settings and Plugin pages",
+        "description":"Observed behaviour:\nThere are two search fields visible on the same page: one in the Settings panel and one in the Marketplace tab under Plugins. This causes confusion, as it is unclear which search field is active or what it is searching. A user reported spending several minutes to realize that the search in the left sidebar is for Settings only, whereas the search in the center pane is for the Marketplace plugins.\n\n\n\n**Problem:**\n\n* Two search fields coexist on the same screen but serve different contexts (settings vs. marketplace).\n* Users find it confusing to distinguish between these search fields and unders... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_054",
+        "project_name":"Fast Badger",
+        "Assignee":"user_083",
+        "Priority":"Normal",
+        "Type":"Usability Problem",
+        "id":34
+    },
+    {
+        "summary":"Problem observed: Adjust chat text size according to users Text size & spacing settings",
+        "description":"Observed behaviour:\nThe current chat text size always uses the compact style regardless of user preferences. It is suggested to adjust the text size in the chat based on the *Text size & spacing* setting from the user's profile to better accommodate users who prefer larger text.\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_079",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_018",
+        "Priority":"Normal",
+        "Type":"Task",
+        "id":35
+    },
+    {
+        "summary":"Detected anomaly: Issues with SUBPLOTS_SPEC handling in lets-plot gggrid",
+        "description":"Reported case:\nProblems have been identified with the handling of SUBPLOTS_SPEC in the lets-plot `gggrid` function:\n\n1. Scale adjustments do not work correctly when stretching or shrinking the plot.\n2. The theme application logic is incorrect. Currently, the theme change is applied individually to each subplot, but the correct approach should apply the theme to the entire subplot collection, as SUBPLOTS_SPEC now has its own dedicated theme (flavor).\n\nThe fix requires updating the utility logic so that the theme is applied to the SUBPLOTS_SPEC object as a whole, rather than each subplot separately.\n\nExample c... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_060",
+        "project_name":"Fast Wolf",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Feature",
+        "id":36
+    },
+    {
+        "summary":"Detected anomaly: FileAlreadyExistsException during Native pre-commit build copying Kotlin\/Native distribution",
+        "description":"Summary of issue:\nThe Native pre-commit build regularly fails due to a `FileAlreadyExistsException` when attempting to copy the Kotlin\/Native distribution. The failure is observed with the error:\n```\n12:48:41       at org.jetbrains.kotlin.org.apache.commons.io.function.Uncheck.wrap(Uncheck.java:355)\n12:48:41       at org.jetbrains.kotlin.org.apache.commons.io.function.Uncheck.apply(Uncheck.java:181)\n12:48:41       at org.jetbrains.kotlin.org.apache.commons.io.file.FilesUncheck.copy(FilesUncheck.java:100)\n12:48:41       at org.jetbrains.kotlin.gradle.targets.native.toolchain.NativeVersionValueSource$processToolc... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_136",
+        "project_name":"Fast Falcon",
+        "Assignee":"user_092",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":37
+    },
+    {
+        "summary":"User noticed: Missing backend syntax highlighting for C++ files in C# projects",
+        "description":"Observed behaviour:\nIn version 252 `.cpp` files in C# projects no longer show backend syntax highlighting, unlike in 251\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_069",
+        "project_name":"Unidentified Tiger",
+        "Assignee":"user_056",
+        "Priority":"Major",
+        "Type":"Bug",
+        "id":38
+    },
+    {
+        "summary":"Improvement needed: Enhance root node log output to match Bazel CLI output during build synchronization",
+        "description":"Reported case:\nCurrently, the root node in the build tool window does not provide meaningful or frequent information during the Bazel sync process. While the Bazel CLI outputs detailed status updates every few seconds, including status of downloads and target analysis, this information is not reflected in the root node logs.\n\n**Problem:**\n\n* The root node only shows minimal information, such as 'Syncing...' and 'Collect project targets'.\n* This lack of detailed, periodic updates leads to less visibility into the sync process.\n* There's concern about duplicating memory usage if root Bazel output is piped dire... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_028",
+        "project_name":"Lazy Raccoon",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":39
+    },
+    {
+        "summary":"Improvement needed: Suggestion appears on the next line in Commit Messages instead of inline",
+        "description":"Summary of issue:\n**Problem:**\nThe suggestion in the Commit Messages is displayed on the next line rather than inline with the prompt.\n\n**Details:**\n- The issue was observed where the suggestion appears below the current line in the Commit Messages window.\n- This behavior differs from the expected inline suggestion display.\n\n**Expected Behavior:**\nSuggestions should be shown inline on the same line as the typed input to improve usability and readability.\n\nThis issue may affect the line completion feature's user experience and needs investigation and resolution.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_108",
+        "project_name":"Lazy Beaver",
+        "Assignee":"user_071",
+        "Priority":"Minor",
+        "Type":"Task",
+        "id":40
+    },
+    {
+        "summary":"System shows: Structure tool window displays members from other files by default",
+        "description":"Observed behaviour:\nThe Structure tool window currently shows members from other files and compiled code by default. This behavior appears to be unnecessary for a tool window designed primarily for local navigation within the current file.\n\n**Problem:**\n- The tool window displays members beyond the current file, leading to potential confusion or clutter.\n\n**Expected behavior:**\n- The Structure tool window should show members of the current file only by default.\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_064",
+        "project_name":"Unidentified Tiger",
+        "Assignee":"user_064",
+        "Priority":"Normal",
+        "Type":"Usability Problem",
+        "id":41
+    },
+    {
+        "summary":"System shows: Plugin requirement notification shows empty plugin list",
+        "description":"Description:\nThere is an issue with the notification warning about missing required plugins in IntelliJ IDEA. The notification is displayed in the notifications area and in the Notification tool window, but the list of missing plugins is empty, making it unclear which plugins are required.\n\nExample from the log shows the actual missing plugin information:\n```\nProject 'intellij' requires plugin 'JetBrains Monorepo DevKit' version '252.16069' or higher, but '252.14842' is installed.\n```\n\nSteps to reproduce or note:\n- Notification displays with an empty plugin list.\n- Issue appears on nightly builds installed... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_098",
+        "project_name":"Fast Badger",
+        "Assignee":"user_137",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":42
+    },
+    {
+        "summary":"Improvement needed: Duplicated Kotlin Notebook entries in Welcome Screen and remove action failure",
+        "description":"Reported case:\nThe Kotlin Notebook (KN) section in the IntelliJ IDEA Welcome Screen sometimes displays duplicated entries for the same notebook file, as shown in the provided screenshots.\n\n- duplicated entries\n- removing does nothing but should remove entry from the list (not FS).\n\nExpected behavior: If the notebook file is removed or deleted externally, its entry in the Welcome Screen should be grayed out or otherwise visually indicated as unavailable, to reflect its non-existence.\n\nImprovement suggestion: Implement a visual indicator such as graying out missing notebook entries to improve user experience a... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_060",
+        "project_name":"Fast Wolf",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":43
+    },
+    {
+        "summary":"Issue reported: Last symbol dropped when applying \"Suggest an alternate summary\" action",
+        "description":"Observed behaviour:\nThere is an issue where the last symbol of the summary is dropped when the \"Suggest an alternate summary\" action is applied, whereas this does not occur when using the \"Suggest a summary\" action.\n\nThis potentially indicates a bug in the \"Suggest an alternate summary\" action that causes truncation of the last character in the summary text.\n\n**Steps to reproduce:**\n\n1. Apply the \"Suggest an alternate summary\" action to a summary.\n2. Observe that the last symbol is missing in the resulting summary.\n3. Apply the \"Suggest a summary\" action.\n4. Confirm that the last symbol is retained as expected.\n\n... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_080",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_018",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":44
+    },
+    {
+        "summary":"System shows: Review and improve Docker image naming convention for images",
+        "description":"Reported case:\nThe recent change to Docker image naming introduced issues with the current naming scheme, particularly for semantic version tags and repository ownership:\n\n1. Semantic version strings are truncated, e.g., `v17.8.6-ee` becomes `gitlab-v17`, which reduces clarity.\n2. Owner information is not considered, causing potential confusion when different repositories share the same name, e.g., `seart-group\/ghs` and `dabico\/ghs` both become `ghs`.\n3. Docker image tag restrictions complicate including owner and repository names, especially as characters like `\/` are invalid and substitutions like `-` or `... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_105",
+        "project_name":"Unidentified Hedgehog",
+        "Assignee":null,
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":45
+    },
+    {
+        "summary":"Improvement needed: Misplaced button in Summarize thread feature UI",
+        "description":"Description:\nThere is a UI glitch in the \"Summarize thread\" feature where the button that opens the link to the Slack thread is misplaced. This issue affects the usability and clarity of the feature.\n\n**Problem:**\n\n* The button to access the Slack thread link is not positioned correctly.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_079",
+        "project_name":"Unidentified Roe",
+        "Assignee":"user_018",
+        "Priority":"Normal",
+        "Type":"Cosmetics",
+        "id":46
+    },
+    {
+        "summary":"Problem observed: Exception due to invalid TextRange in latest nightly build",
+        "description":"Description:\nAn exception occurs intermittently in the latest nightly build with the message:\n```\njava.lang.IllegalArgumentException: Invalid range specified: (199, 198); \n```\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_108",
+        "project_name":"Lazy Beaver",
+        "Assignee":"user_108",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":47
+    },
+    {
+        "summary":"Unexpected behavior: KPP plugin causes configuration error on eager tasks configuration",
+        "description":"Details provided:\nThe project build fails after adding a KotlinPP module as a dependency to another module.\n\n**Problem:**\n\n* Applying the 'ai.kotlin.multiplatform' plugin results in the following configuration error:\n\n```\nAn exception occurred applying plugin request [id: 'ai.kotlin.multiplatform']\n> Failed to apply plugin 'org.jetbrains.kotlin.multiplatform'.\n> Gradle#projectsEvaluated(Action) on build 'code-engine' cannot be executed in the current context.\n```\n\n* The failure is caused by:\n  * Use of `tasks.withType<T>` leading to eager task realization, which is discouraged.\n  * Execution order issues where ... [details trimmed]\n\nNext steps: Debugging required.",
+        "reporter_name":"user_136",
+        "project_name":"Fast Falcon",
+        "Assignee":null,
+        "Priority":"P4",
+        "Type":"Bug",
+        "id":48
+    },
+    {
+        "summary":"Problem observed: Improve the quality of the green notification dot on the Tool Window icon",
+        "description":"Summary of issue:\nThere is an issue with the green notification dot shown on the Junie tool window icon in the IDE. The dot appears pixelated and poorly drawn.\n\nThe rendering of this dot uses the Platform API with the following code snippet:\n\n```\ntoolWindow.setIcon(\n  IconManager.Companion.getInstance()\n    .withIconBadge(\n      JunieIcons.ToolWindowLogo,\n      badgeColor\n    )\n)\n```\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_065",
+        "project_name":"Fast Badger",
+        "Assignee":"user_116",
+        "Priority":"Normal",
+        "Type":"Cosmetics",
+        "id":49
+    },
+    {
+        "summary":"Unexpected behavior: Support Create Class quick fix for K2 mode in Kotlin notebooks",
+        "description":"Observed behaviour:\n**Summary:**\n\nWe should implement the Create Class quick fix (**CreateClassFromUsageFix**): it should detect when a class is missing and generate its implementation correctly in K2 mode inside Kotlin notebooks (like we have in K1 or K2 regular Kotlin files)\n\n\n\n**Example:**\n\ninvoke quickFix Create Class on User\n\n```kotlin\nval user = User(\"John\", 25) \n```\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_091",
+        "project_name":"Fast Wolf",
+        "Assignee":"user_025",
+        "Priority":"Normal",
+        "Type":"Bug",
+        "id":50
+    },
+    {
+        "summary":"Issue reported: java.lang.NoSuchMethodError: org.jetbrains.kotlinx.jupyter.repl.logging.LoggingManager with embedded mode in 2025.1.2 causing broken notebook",
+        "description":"Summary of issue:\n**Version:** Build #IU-251.26094.37, built on May 19, 2025\n\n**Steps:**\n\n1. set **Run in IDE Process**\n\n2. type and run `notebook` or \n\n```kotlin\nprintln(\"test\")\n```\n\nNothing hapens ( and **Exception is shown:**\n\n\n\n![](Monosnap simpleExperiments \u2013 note5.ipynb [simpleExperiments] 2025-05-27 19-23-091.png){width=70%}\n\n\n\n```\njava.lang.NoSuchMethodError: 'org.jetbrains.kotlinx.jupyter.repl.logging.LoggingManager org.jetbrains.kotlinx.jupyter.repl.creating.ReplComponentsProvider.getLoggingManager()'\n    ... (truncated for brevity)\n```\n\n![](Monosnap IDE Internal Errors 2025-05-27 16-38-50.png){width=... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_091",
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":51
+    },
+    {
+        "summary":"Issue reported: Fix bash script formating issue and enable formating on CI",
+        "description":"Description:\nRemove bash script formating from bazel run \/\/:format\n\nFormat all the unformated code once\n\nActiveate formating check on every safe push to ultimate\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_028",
+        "project_name":16,
+        "Assignee":"user_028",
+        "Priority":5,
+        "Type":8,
+        "id":52
+    },
+    {
+        "summary":"Problem observed: Authorization Issue with SummarizeT Slack App Action",
+        "description":"Summary of issue:\nThe 'SummarizeT' Slack app action fails to function properly, repeatedly prompting for authorization with the message: \"To create issue drafts, :lock: authorize the app with your YouTrack account.\" This issue prevents creating issue drafts through the Slack app. Further investigation is needed to determine the cause and resolve the persistent authorization prompt.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_130",
+        "project_name":16,
+        "Assignee":"user_124",
+        "Priority":5,
+        "Type":8,
+        "id":53
+    },
+    {
+        "summary":"User noticed: Regression: Unfriendly error when creating and starting dev environment using RI",
+        "description":"Details provided:\nWhen attempting to `Create and start dev environment` using RI, the following error is encountered:\n\n```\nCall to RdDevConfigurationsService\/create failed with error: Project root must point on an existing .sln\n```\n\nThis error message is not user-friendly and indicates that the operation requires the project root to point to an existing .sln file.\n\nThis issue is identified as a regression in the system.\n\nExpected behavior:\n\n* The system should provide a clearer, more user-friendly error message or properly handle the case when the project root does not point to an existing .sln file during the ... [details trimmed]\n\nNext steps: Debugging required.",
+        "reporter_name":"user_050",
+        "project_name":16,
+        "Assignee":"user_001",
+        "Priority":3,
+        "Type":8,
+        "id":54
+    },
+    {
+        "summary":"System shows: Improve project selection for summarizeT integration and add interactive field selectors",
+        "description":"Summary of issue:\nThe current 'summarizeT' functionality attempts to guess the relevant project to create a draft based on the Slack channel name and conversation using an LLM, selecting from a list of available projects. However, there is an issue where certain projects, such as 'Bazel', are not recognized or selected despite existing in corresponding Slack channels (e.g., 'bazel-internal' private channel).\n\n**Problems identified:**\n- The project guessing logic may have bugs or prompt mistakes, leading to failure in parsing some projects.\n- Lack of an interactive project selector or fields selector (especially... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_081",
+        "project_name":5,
+        "Assignee":"user_124",
+        "Priority":3,
+        "Type":5,
+        "id":55
+    },
+    {
+        "summary":"System shows: Disable Setting value is redundant diagnostic for default values",
+        "description":"Description:\nThe diagnostic \"Setting value is redundant. It's identical to the default value\" can be very annoying in cases where users intentionally lock specific versions or constants (e.g., `compose.version`, `compileSdk`, `targetSdk`) to avoid unexpected breakages due to default version changes in Amper updates. This issue is aggravated when the Amper IDE plugin is out of sync with the Amper version, causing inaccurate diagnostics.\n\nWe can keep it only for warning when the user overrides the value from the template or inherited from the previous fragments. This still can be the desired behavior, but th... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_121",
+        "project_name":16,
+        "Assignee":"user_121",
+        "Priority":5,
+        "Type":8,
+        "id":56
+    },
+    {
+        "summary":"System shows: Java imports are unresolved in B plugin project after importing as Bazel project",
+        "description":"Reported case:\nObserved behavior:\n\n* Java imports in the opened Kotlin test file are broken, showing red and unresolved errors.\n* This issue appears despite successful B sync and build, as indicated by the build output log.\n\nThis issue needs investigation to understand why Java imports are not resolved inside the B plugin project when imported this way.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_028",
+        "project_name":16,
+        "Assignee":null,
+        "Priority":1,
+        "Type":8,
+        "id":57
+    },
+    {
+        "summary":"Issue reported: Buildifier does not reformat files edited in Excluded Directories",
+        "description":"Details provided:\nThe `buildifier` tool does not perform reformatting on files that are located in the \"Excluded Directories\" bucket. When files from these directories are edited, no automatic reformatting occurs.\n\n**Problem:**\n\n* Reformatting is expected to apply to edited files.\n* Files in \"Excluded Directories\" are ignored by `buildifier`.\n\n**Expected behavior:**\n\n* Files in \"Excluded Directories\" should be included for reformatting to maintain coding standards uniformly.\n\nThis issue resembles an edge case in `buildifier` handling regarding excluded paths.\n\nNext steps: Debugging required.",
+        "reporter_name":"user_028",
+        "project_name":13,
+        "Assignee":"user_076",
+        "Priority":3,
+        "Type":0,
+        "id":58
+    },
+    {
+        "summary":"Improvement needed: Redundant .Companion is inserted after using Move refactoring on a method",
+        "description":"Reported case:\nAfter invoking the \"Move\" refactoring to move a method to its own file, the code incorrectly inserts a redundant `.Companion` qualifier. This behavior introduces unnecessary and incorrect code such as `Modifier.Companion.padding` instead of the expected `Modifier.padding`.\n\n**Problem:** The refactoring tool adds an extra `.Companion` when moving methods, causing redundant qualifiers in the code.\n\n**Expected Behavior:** The refactoring should move the method without inserting redundant qualifiers like `.Companion`, preserving clean and correct code syntax.\n\n**Example:**\n```kotlin\nval context : ... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_072",
+        "project_name":16,
+        "Assignee":"user_107",
+        "Priority":5,
+        "Type":8,
+        "id":59
+    },
+    {
+        "summary":"Unexpected behavior: Enhance project switching and favorites management between Issues and Knowledge Base in the new UI",
+        "description":"Description:\n**Problem:**\n\n* Previously, switching between projects was quick and accessible via a drop-down menu allowing immediate search queries with just two clicks.\n* In the new UI, the method to switch between different projects is not as straightforward or efficient.\n* The current \"Projects\" favorites list in the sidebar combines projects from both Issues and Knowledge Base without differentiation.\n* This lack of separation forces users to mix projects used for different purposes (e.g. Knowledge Base vs Issues), which is inconvenient and inefficient.\n* The saved searches and project favorites do not... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_079",
+        "project_name":16,
+        "Assignee":"user_040",
+        "Priority":3,
+        "Type":0,
+        "id":60
+    },
+    {
+        "summary":"System shows: Implement Recent Assignee Suggestions for New PR",
+        "description":"Description:\nCurrently, assigning reviewers or assignees to pull requests requires manually searching and selecting from the full list of users, which is tedious and time-consuming. The issue is the lack of a feature that remembers recent assignees and suggests them by default when creating a pull request.\n\n**Problem:**\n- Frequent repetition in searching for commonly assigned reviewers or assignees.\n- No intelligent suggestions or auto-completions based on recent usage.\n\n**Proposed Enhancement:**\n- Store a shortlist of the most recently assigned people.\n- Suggest these recent assignees automatically when c... [details trimmed]\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_027",
+        "project_name":16,
+        "Assignee":"user_027",
+        "Priority":3,
+        "Type":8,
+        "id":61
+    },
+    {
+        "summary":"Detected anomaly: \"Update usages to reflect signature change\" deletes context parameters",
+        "description":"Reported case:\nThe 'Update usages to reflect signature change' feature currently removes context parameters during the update process.\n\n**Problem:** When applying the signature change update, the context parameters like 'inlineFunctionBodyContext' are deleted instead of being preserved.\n\n**Expected Behavior:** The update action should correctly reflect the new signature change without removing essential context parameters from the method signatures.\n\nThis issue is demonstrated by a code snippet where the parameter 'inlineFunctionBodyContext' is removed when the update action is applied.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_072",
+        "project_name":16,
+        "Assignee":"user_017",
+        "Priority":5,
+        "Type":8,
+        "id":62
+    },
+    {
+        "summary":"Improvement needed: Clarify Git branching strategy and improve CI\/CD deployment processes",
+        "description":"Reported case:\nThe current state of the Git branches is causing confusion regarding which branch is the source of truth, as the `main` branch has commits ahead of the `dev` branch, which is not updated accordingly. The lack of a clear and enforced workflow for commits and merges between `dev` and `main` leads to inconsistencies.\n\nKey points and issues raised:\n- The agreed approach was that `dev` is for active development while `main` serves as the production branch.\n- Uncertainty exists about which branch should be considered authoritative when commits appear out of sync.\n- Proposal to always push commits fi... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_133",
+        "project_name":16,
+        "Assignee":"user_133",
+        "Priority":5,
+        "Type":8,
+        "id":63
+    },
+    {
+        "summary":"User noticed: IDE hangs during the creation of a new Kotlin Jupyter notebook in IntelliJ IDEA",
+        "description":"Observed behaviour:\nThe IntelliJ IDEA hangs when attempting to create a new Kotlin Jupyter notebook. This issue was observed in the UI test build 701278066 on the build server. \n\nThe problem prevents successful creation and usage of Kotlin notebooks within the IDE, impacting development workflow.\n\nSteps to reproduce:\n- Attempt to create a new Kotlin Jupyter notebook in IntelliJ IDEA.\n\nExpected behavior:\n- The IDE should successfully create and open a new Kotlin Jupyter notebook without freezing or hanging.\n\nAdditional information:\n- The issue was captured in thread dump logs before the IDE was forcefully terminat... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_060",
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":64
+    },
+    {
+        "summary":"Detected anomaly: AI Mentions user themselves in suggested replies",
+        "description":"Observed behaviour:\nThe AI feature integrated into yt identifies users correctly, including recognizing when a mention refers to the user themselves. However, it incorrectly allows or generates mentions of a user mentioning themselves.\n\nThis behavior is identified as a bug since a user mentioning themselves is unintended or unnecessary in the context of issue comments or discussions.\n\n**Problem:**\n\n* The AI understands user identity but enables or suggests mentions where the user mentions themselves.\n* This leads to redundant or confusing mentions within the system.\n\n**Expected behavior:**\n\n* The system should pr... [details trimmed]\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_081",
+        "project_name":16,
+        "Assignee":"user_081",
+        "Priority":5,
+        "Type":8,
+        "id":65
+    },
+    {
+        "summary":"Detected anomaly: Add ability to build other project configurations without switching",
+        "description":"Description:\n**Problem:** Currently, building a project configuration requires switching to that configuration first. For example, if editing the Development Editor configuration, it is not possible to compile the Shipping Client configuration without switching.\n\n**Expected Behavior:** It should be possible to compile or build any project configuration directly, without having to switch the active configuration.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_101",
+        "project_name":16,
+        "Assignee":"user_090",
+        "Priority":5,
+        "Type":8,
+        "id":66
+    },
+    {
+        "summary":"Detected anomaly: Exclude certain .star files from Qodana analysis to prevent critical alerts on Main branch",
+        "description":"Summary of issue:\nThere is an issue with Qodana static analysis reporting a high number of critical and high severity problems (78 total) in various `.star` files, including `loop.star`, `string_format.star`, and `function.star`, among others. These alerts are appearing on the Main branch, causing concern.\n\nThe discussion reveals that the Qodana baseline update was postponed and some changes to `.star` files might have triggered the critical warnings. Instead of updating the baseline to accommodate these findings, the team suggests excluding these `.star` files entirely from the Qodana run to avoid these critic... [details trimmed]\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_028",
+        "project_name":16,
+        "Assignee":"user_028",
+        "Priority":3,
+        "Type":0,
+        "id":67
+    },
+    {
+        "summary":"Issue reported: Background images cause persistent freezing issue after zoom in project",
+        "description":"Reported case:\n**Issue:**\nUsers have consistently observed the application freezing (or \"hanging\") when working with background images in the project.\n\n**Details:**\n- The freezing occurs more or less reliably.\n- Even though coordinates for backgrounds load properly, they are applied incorrectly.\n- It is hypothesized that the internal state might not reset after zooming on images, leading to the problem.\n\n**Suggested areas to investigate:**\n- Implement fallback cropping directly embedded within default background images.\n- Set valid transformations for each default background in DEFAULT_BACKGROUND_DATA.\n- Rev... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_044",
+        "project_name":13,
+        "Assignee":"user_044",
+        "Priority":3,
+        "Type":0,
+        "id":68
+    },
+    {
+        "summary":"Problem observed: DataWrangler: excessive export option for static files",
+        "description":"Observed behaviour:\nobserved on\nDataSpell 2025.2 EAP #`DS-252.15587`\nPyCharm 2025.2 EAP #`PY-252.15849`\n\n----\n\nwhen DataWrangler is opened over static files, there is an excessive export option labeled \"new DW cell in {0}\"\n\nDesired: Match documented behaviour.",
+        "reporter_name":"user_038",
+        "project_name":16,
+        "Assignee":"user_104",
+        "Priority":5,
+        "Type":8,
+        "id":69
+    },
+    {
+        "summary":"Problem observed: Support for single file in multiple packages",
+        "description":"Description:\ne.g. if one file is used as a dependency for several modules\n\nResolution expected: Normal operation restored.",
+        "reporter_name":"user_010",
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":70
+    },
+    {
+        "summary":"Improvement needed: Add descriptions for project markers and tooltips for icons",
+        "description":"Reported case:\nThere are suggestions to improve the project cards by adding more informative markers and tooltips:\n\n1. Include information about what it means to become a Featured project or a grand winner, for example in the FAQ section.\n2. Add tooltips for the icons displayed on project cards to clarify their meaning.\n3. Consider displaying all relevant icons directly on the project cards.\n\nThese enhancements would improve user understanding of project status and icons.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_034",
+        "project_name":16,
+        "Assignee":"user_096",
+        "Priority":5,
+        "Type":8,
+        "id":71
+    },
+    {
+        "summary":"Improvement needed: Clarification and handling of injected fragments in logs causing unknown errors",
+        "description":"Reported case:\n**Problem:** A user encounters an \"Unknown error\" on their project, with logs indicating the presence of injected fragments such as JSON in strings, possibly through Junie. There is uncertainty whether this represents an attempt to inject malicious code or if it is related to the platform's support for injected fragments.\n\n**Details:**\n- The platform has support for injected fragments in strings (e.g., JSON), but this feature is considered unreliable.\n- The logs raise concerns about potential code injection attempts.\n- There is a question whether exceptions thrown during error collection might... [details trimmed]\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":"user_051",
+        "project_name":13,
+        "Assignee":"user_058",
+        "Priority":3,
+        "Type":0,
+        "id":72
+    },
+    {
+        "summary":"Problem observed: Issue with default tab for task history",
+        "description":"Summary of issue:\n### Problem Description\n\nCurrently, the J application displays the **Favorites** tab by default regardless of whether the user has a non-empty task history. This behavior appears to be linked to the delay in loading history, which can take 1-2 seconds, especially for users with extensive history.\n\n### Expected Behavior\n\nIf a user has task history, the app should show the **History** tab by default instead of the **Favorites** tab.\n\n### Solution\n\n* Currently agreed upon solution: Wait for tasks to load and display a loader in the center. A more suitable animation will be developed later.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_051",
+        "project_name":16,
+        "Assignee":"user_051",
+        "Priority":5,
+        "Type":8,
+        "id":73
+    },
+    {
+        "summary":"User noticed: UI Freeze Issue in EditSearchReplace",
+        "description":"Summary of issue:\nThere is a reported **UI freeze** from a Discord user concerning the **EditSearchReplace** feature. An investigation into the logs revealed the following error:\n\n* **Exception:** `java.lang.AssertionError: File text mismatch`\n* **File:** `[EditSearchReplace.kt:191]`\n\n[original discord discussion](\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":"user_051",
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":74
+    },
+    {
+        "summary":"Issue reported: Rename AppCode module configuration file (generated #1)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #1.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":75
+    },
+    {
+        "summary":"Problem observed: Structure view incorrectly shows private constructor properties as public (generated #2)",
+        "description":"Observed behaviour:\nAuto-generated issue based on anonymized corpus. Pattern #2.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nDesired: Match documented behaviour.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":76
+    },
+    {
+        "summary":"Problem observed: Error saving issue description due to duplicates suggestion-related exception (generated #3)",
+        "description":"Description:\nAuto-generated issue based on anonymized corpus. Pattern #3.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":77
+    },
+    {
+        "summary":"Issue reported: UI Improvement Suggestion for Preflight Checks Conclusion Formatting (generated #4)",
+        "description":"Observed behaviour:\nAuto-generated issue based on anonymized corpus. Pattern #4.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nDesired: Match documented behaviour.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":78
+    },
+    {
+        "summary":"User noticed: Inconsistent inlay hints for function signatures and lambdas (generated #5)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #5.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":13,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":79
+    },
+    {
+        "summary":"Issue reported: Investigate multiple exceptions related to org.jetbrains.kotlin.utils.exceptions.KotlinIllegalArgumentExceptionWithAttachments: We should be able t...",
+        "description":"Description:\nAuto-generated issue based on anonymized corpus. Pattern #6.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":80
+    },
+    {
+        "summary":"Issue reported: Containers crash with Failed to make POST error during concurrent runs (generated #7)",
+        "description":"Description:\nAuto-generated issue based on anonymized corpus. Pattern #7.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":null,
+        "project_name":5,
+        "Assignee":null,
+        "Priority":3,
+        "Type":0,
+        "id":81
+    },
+    {
+        "summary":"Improvement needed: Support for single file in multiple packages (generated #8)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #8.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":82
+    },
+    {
+        "summary":"Issue reported: Buildifier does not reformat files edited in Excluded Directories (generated #9)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #9.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":83
+    },
+    {
+        "summary":"System shows: Search bar expands unexpectedly without explicit user interaction (generated #10)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #10.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":13,
+        "Assignee":null,
+        "Priority":3,
+        "Type":6,
+        "id":84
+    },
+    {
+        "summary":"Issue reported: Last symbol dropped when applying \"Suggest an alternate summary\" action (generated #11)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #11.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":0,
+        "Assignee":null,
+        "Priority":3,
+        "Type":0,
+        "id":85
+    },
+    {
+        "summary":"Problem observed: Investigate multiple exceptions related to org.jetbrains.kotlin.utils.exceptions.KotlinIllegalArgumentExceptionWithAttachments: We should be able t...",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #12.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":0,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":86
+    },
+    {
+        "summary":"Unexpected behavior: UI Improvement Suggestion for Preflight Checks Conclusion Formatting (generated #13)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #13.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":13,
+        "Assignee":null,
+        "Priority":3,
+        "Type":5,
+        "id":87
+    },
+    {
+        "summary":"Detected anomaly: Misplaced button in Summarize thread feature UI (generated #14)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #14.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":0,
+        "id":88
+    },
+    {
+        "summary":"System shows: Settings tab: Improve clarity of search fields in settings and Plugin pages (generated #15)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #15.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":13,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":89
+    },
+    {
+        "summary":"User noticed: DataWrangler: excessive export option for static files (generated #16)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #16.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":90
+    },
+    {
+        "summary":"Problem observed: IDE Freezes with Blank Whats New Page on Windows (generated #17)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #17.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":91
+    },
+    {
+        "summary":"User noticed: Exception due to invalid TextRange in latest nightly build (generated #18)",
+        "description":"Observed behaviour:\nAuto-generated issue based on anonymized corpus. Pattern #18.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nDesired: Match documented behaviour.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":92
+    },
+    {
+        "summary":"System shows: Add Mark as relates to (and\/or other link types?) option for duplicate suggestion SIV block (generated #19)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #19.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":93
+    },
+    {
+        "summary":"Issue reported: Missing backend syntax highlighting for C++ files in C# projects (generated #20)",
+        "description":"Reported case:\nAuto-generated issue based on anonymized corpus. Pattern #20.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":8,
+        "id":94
+    },
+    {
+        "summary":"Issue reported: Bad visual feedback on selected project dependency (generated #21)",
+        "description":"Description:\nAuto-generated issue based on anonymized corpus. Pattern #21.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":95
+    },
+    {
+        "summary":"Detected anomaly: Redundant .Companion is inserted after using Move refactoring on a method (generated #22)",
+        "description":"Reported case:\nAuto-generated issue based on anonymized corpus. Pattern #22.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":96
+    },
+    {
+        "summary":"Detected anomaly: Clarify compiler behavior for non-optional CoroutineContext parameter in runBlocking (generated #23)",
+        "description":"Reported case:\nAuto-generated issue based on anonymized corpus. Pattern #23.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nRecommendation: Investigate and resolve underlying cause.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":97
+    },
+    {
+        "summary":"Unexpected behavior: Remove location labels next to directory names in Project View (generated #24)",
+        "description":"Details provided:\nAuto-generated issue based on anonymized corpus. Pattern #24.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nNext steps: Debugging required.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":3,
+        "Type":0,
+        "id":98
+    },
+    {
+        "summary":"Issue reported: AI duplicate detection includes parent and subtask issues erroneously (generated #25)",
+        "description":"Summary of issue:\nAuto-generated issue based on anonymized corpus. Pattern #25.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nExpected outcome: The system should function without errors.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":99
+    },
+    {
+        "summary":"Detected anomaly: DataWrangler: excessive export option for static files (generated #26)",
+        "description":"Description:\nAuto-generated issue based on anonymized corpus. Pattern #26.\n\nSummary of the problem: Similar behaviour observed in existing reports.\n\nExpected behaviour: System should behave as documented and not trigger unexpected states.\n\nNotes: Sensitive data removed.\n\nResolution expected: Normal operation restored.",
+        "reporter_name":null,
+        "project_name":16,
+        "Assignee":null,
+        "Priority":5,
+        "Type":8,
+        "id":100
+    }
+]
